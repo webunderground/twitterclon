@@ -96,7 +96,7 @@ input {
   <?php 
   // Se conecta al SGBD 
    $myser=$_SESSION["username"]; 
-  if(!($conexion = mysql_connect("localhost", "root", "lolita1873"))) 
+  if(!($conexion = mysql_connect("localhost", "root", "password"))) 
     die("Error: No se pudo conectar");
  
   // Selecciona la base de datos 
@@ -114,12 +114,10 @@ input {
   while($fila = mysql_fetch_assoc($resultado)) 
   { 
    echo "<div >";
- echo"
-      </div>";   
-   echo "to:" . $fila['user'] . "<br> from:" . $fila['usuario'] . "<br/> <div class='tiempo'>" . $fila['fecha'] . "</div>";
-  
-       
-   echo "<div class='comment'><p>";
+ echo" </div>";
+echo"<span class='material-icons'> account_circle</span> ";	  
+echo "to:" . $fila['user'] . "<br> from:" . $fila['usuario'] . "<br/> <div class='tiempo'>" . $fila['fecha'] . "</div>";
+    echo "<div class='comment'><p>";
     echo $fila['comentario'] . '</p><br/>';
    echo "</div>";
    echo "<hr>";
