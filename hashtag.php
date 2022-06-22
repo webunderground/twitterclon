@@ -63,7 +63,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
  {  
       $tag = preg_replace("#[^a-zA-Z0-9_]#", '', $_GET["tag"]);  
       echo '<h1>' . $tag . '</h1>';  
-      $connect = mysqli_connect("localhost", "root", "lolita1873", "twitter");  
+      $connect = mysqli_connect("localhost", "root", "password", "twitter");  
       $query = "SELECT * FROM blog where blog_title LIKE '%".$tag."%' ORDER BY fecha DESC";  
       $result = mysqli_query($connect, $query);  
       if(mysqli_num_rows($result) > 0)  
@@ -83,7 +83,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <?php 
   // Se conecta al SGBD 
   $user=$_SESSION["username"]; 
-  if(!($conexion = mysql_connect("localhost", "root", "lolita1873"))) 
+  if(!($conexion = mysql_connect("localhost", "root", "password"))) 
     die("Error: No se pudo conectar");
  $user=$_SESSION['username'] ;
   // Selecciona la base de datos 
