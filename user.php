@@ -121,7 +121,7 @@ echo "The current date and time  $DateAndTime2.";
  {  
       $tag = preg_replace("#[^a-zA-Z0-9_]#", '', $_GET["tag"]);  
       echo '<h1>' . $tag . '</h1>';  
-      $connect = mysqli_connect("localhost", "root", "lolita1873", "twitter");  
+      $connect = mysqli_connect("localhost", "root", "password", "twitter");  
       $query = "SELECT * FROM profile where usuario LIKE '%".$tag."%'";  
       $result = mysqli_query($connect, $query);  
       if(mysqli_num_rows($result) > 0)  
@@ -143,7 +143,7 @@ echo "The current date and time  $DateAndTime2.";
  <?php 
   // Se conecta al SGBD 
   $user=$_SESSION["username"]; 
-  if(!($conexion = mysql_connect("localhost", "root", "lolita1873"))) 
+  if(!($conexion = mysql_connect("localhost", "root", "password"))) 
     die("Error: No se pudo conectar");
  $user=$_SESSION['username'] ;
   // Selecciona la base de datos 
@@ -163,7 +163,8 @@ echo "The current date and time  $DateAndTime2.";
    echo "<div >";
  echo"</div>";   
    
-   echo"<h2>";  
+   echo"<h2>"; 
+echo"<span class='material-icons'> account_circle</span> ";	  	  
      echo $fila['usuario'] . '</h2><br/>';
     echo  $fila['fecha'] .'<br>';	 
    echo "<div class='comment'><p>";
