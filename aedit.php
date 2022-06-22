@@ -67,7 +67,8 @@ th, td { border: 0px solid black; overflow: hidden; width: 20px; }
         <span class="material-icons"> home </span>
       <a href="index.php" style=" text-decoration: none;">   <h2>Home</h2></a>
       </div>
-	   <?php echo htmlspecialchars($_SESSION["username"]); ?>
+	   	  <h2> <span class="material-icons"> account_circle</span> 	  <?php echo htmlspecialchars($_SESSION["username"]); ?></h2><br>
+
 	                      
 					
 					
