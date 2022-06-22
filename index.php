@@ -174,7 +174,7 @@ echo "The current date and time  $DateAndTime2.";
      
               <?php 
   // Se conecta al SGBD 
-  if(!($conexion = mysql_connect("localhost", "root", "lolita1873"))) 
+  if(!($conexion = mysql_connect("localhost", "root", "password"))) 
     die("Error: No se pudo conectar");
  
   // Selecciona la base de datos 
@@ -192,8 +192,8 @@ echo "The current date and time  $DateAndTime2.";
   while($fila = mysql_fetch_assoc($resultado)) 
   { 
    echo "<div >";
- echo"
-      </div>";   
+ echo"</div>";
+echo"<span class='material-icons'> account_circle</span> ";	  
    echo "<a href='user.php?tag=" . $fila['usuario'] . "'>" . $fila['usuario'] . "</a><br/> <div class='tiempo'>" . $fila['fecha'] . "</div>";
   
        
