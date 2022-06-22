@@ -73,7 +73,8 @@ input {
         <span class="material-icons"> settings </span>
         <a href="settings.php" style=" text-decoration: none;"><h2>settings</h2>
       </div>
-<h2>	  <?php echo htmlspecialchars($_SESSION["username"]); ?></h2><br>
+	  <h2> <span class="material-icons"> account_circle</span> 	  <?php echo htmlspecialchars($_SESSION["username"]); ?></h2><br>
+
 
 
 	
