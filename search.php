@@ -35,7 +35,8 @@
       <div class="sidebarOption active">
         <span class="material-icons"> home </span>
       <a href="index.php" style=" text-decoration: none;">   <h2>Home</h2></a>
-      </div>
+    <h2> <span class="material-icons"> account_circle</span> 	  <?php echo htmlspecialchars($_SESSION["username"]); ?></h2><br>
+
     <div class="widgets__widgetContainer">
 	<blockquote class="twitter-tweet">
  <?php  
