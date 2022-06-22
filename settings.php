@@ -101,7 +101,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <?php 
   // Se conecta al SGBD 
   $user=$_SESSION["username"]; 
-  if(!($conexion = mysql_connect("localhost", "root", "lolita1873"))) 
+  if(!($conexion = mysql_connect("localhost", "root", "password"))) 
     die("Error: No se pudo conectar");
  
   // Selecciona la base de datos 
@@ -119,8 +119,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   while($fila = mysql_fetch_assoc($resultado)) 
   { 
    echo "<div >";
- echo"
-      </div><label>user:</label>";
+   echo"<span class='material-icons'> account_circle</span> ";
+ echo"</div><label>user:</label>";
+	  	  	  
+
   echo "<a href='user.php?tag=" . $fila['usuario'] . "'>" . $fila['usuario'] . "</a><br/>";
    echo "<label>web:</label><a href='" . $fila['web'] . "'>" . $fila['web'] . "</a><br/> <div class='tiempo'>" . $fila['inserdate'] . "</div>";
   
